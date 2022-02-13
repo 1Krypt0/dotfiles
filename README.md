@@ -25,6 +25,8 @@ This will probably expand over time as I find more stuff to add here, but for no
 
 ![Firefox setup](./assets/firefox.png)
 
+![Floating terminals](./assets/term.png)
+
 ![Doom Emacs in all its glory](./assets/doom.png)
 
 ![Neovim setup](./assets/nvim.png)
