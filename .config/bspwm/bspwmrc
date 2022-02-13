@@ -1,0 +1,69 @@
+#! /bin/sh
+
+MONITORS=$(xrandr -q | grep -w "connected" | wc -l)
+
+if [[ $MONITORS -eq "2" ]]; then
+  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-1 --mode 1920x1080 --rotate normal --left-of eDP-1 
+
+  bspc monitor eDP-1 -d web reader discord office spotify
+  bspc monitor HDMI-1-1 -d term dev code
+
+elif [[ $MONITORS -eq "3" ]]; then
+  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-1 --mode 1920x1080 --rotate normal --left-of eDP-1 --output DP-1-1 --mode 1920x1080 --rotate normal --right-of HDMI-1-1
+
+  bspc monitor eDP-1 -d discord spotify
+  bspc monitor HDMI-1-1 -d term dev code
+  bspc monitor DP-1-1 -d web reader office
+
+elif [[ $MONITORS -eq "1" ]]; then
+  bspc monitor eDP-1 -d term dev web reader code discord office spotify
+fi
+
+
+bspc config border_width         0
+bspc config window_gap          20
+bspc config top_padding         0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Alacritty desktop=term follow=on
+bspc rule -a Emacs desktop=dev follow=on state=tiled
+bspc rule -a firefox desktop=web follow=on
+bspc rule -a Zathura desktop=reader follow=on state=tiled
+bspc rule -a code desktop=code state=floating follow=on
+bspc rule -a discord desktop=discord follow=on
+bspc rule -a texmaker desktop=office follow=on
+bspc rule -a spotify desktop=spotify follow=on
+
+# Kill programs before starting
+killall polybar sxhkd dunst redshift feh
+
+# Launch sxhkd
+sxhkd &
+
+#Enable picom for them sweet rounded corners
+picom &
+
+# Launch polybar
+"$HOME"/.config/polybar/launch.sh
+
+# Launch dunst notifications
+"$HOME"/.config/dunst/launch.sh
+
+# Set wallpaper for now
+feh --bg-fill ~/Pictures/background.png &
+
+#Change keyboard layout since Alacritty is acting up
+setxkbmap pt &
+
+#Use ksuperkey to modify Alt+F1
+ksuperkey -e 'Super_L=Alt_L|F1' &
+
+#Launch redshift in an attempt to reduce eyestrain
+redshift -l '41.53183:-8.61233' &
+
+#Launch Spotify even if I won't use it
+spotify
+
