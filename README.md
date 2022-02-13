@@ -23,4 +23,10 @@ This will probably expand over time as I find more stuff to add here, but for no
 
 ## Obligatory Screenshots
 
+![Firefox setup](./assets/firefox.png)
+
+![Doom Emacs in all its glory](./assets/doom.png)
+
+![Neovim setup](./assets/nvim.png)
+
 ## Setting up (TODO)
