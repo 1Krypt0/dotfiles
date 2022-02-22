@@ -507,10 +507,10 @@ background = #85222222
 ws-icon-0 = term;
 ws-icon-1 = dev;
 ws-icon-2 = web;%{T3}%{T-}
-ws-icon-3 = reader;%{T3}%{T-}
+ws-icon-3 = brain;%{T3}%{T-}
 ws-icon-4 = code;%{T3}%{T-}
 ws-icon-5 = discord;
-ws-icon-6 = office;%{T3}%{T-}
+ws-icon-6 = reader;%{T3}%{T-}
 ws-icon-7 = spotify;
 
 ; Available tags:
