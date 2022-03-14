@@ -32,11 +32,19 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias grep='grep --color=auto'
 
 ## Aliases for accessing different classes
+
+### Third-Year, First Semester
 alias fsi='cd ~/Desktop/2.Areas/Uni/Third-Year/First-Semester/FSI/'
 alias rc='cd ~/Desktop/2.Areas/Uni/Third-Year/First-Semester/RC/'
 alias ltw='cd ~/Desktop/2.Areas/Uni/Third-Year/First-Semester/LTW/'
 alias lbaw='cd ~/Desktop/2.Areas/Uni/Third-Year/First-Semester/LBAW/'
 alias pfl='cd ~/Desktop/2.Areas/Uni/Third-Year/First-Semester/PFL/'
+
+### Third-Year, Second Semester
+alias cpd='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/CPD/'
+alias esof='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/ES/'
+alias ia='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/IA/'
+alias comp='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/COMP/'
 
 # Alias for quickly accessing my blog folder
 alias blog='cd ~/Desktop/2.Areas/Blog'
@@ -51,9 +59,19 @@ alias gstat='git status'
 
 alias sicstus='rlwrap /usr/local/sicstus4.7.0/bin/sicstus'
 
-export GOPATH="~/go"
+export GOPATH="$(go env GOPATH)"
+export PATH="${PATH}:${GOPATH}/bin"
 
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk' # Change to version 8 if working on Flutter, but to 11 if if on COMP  
+export PATH=$JAVA_HOME/bin:$PATH 
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+export PATH=$PATH:$ANDROID_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+
 pfetch
 
 eval "$(starship init zsh)"
