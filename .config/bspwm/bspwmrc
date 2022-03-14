@@ -58,6 +58,9 @@ feh --bg-fill ~/Pictures/background.png &
 #Change keyboard layout since Alacritty is acting up
 setxkbmap pt &
 
+# Change WM name so Java apps don't start to cry
+wmname LG3D &
+
 #Use ksuperkey to modify Alt+F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
 
@@ -65,7 +68,7 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 redshift -l '41.53183:-8.61233' &
 
 #Launch Spotify even if I won't use it
-spotify
+spotify &
 
 # Launch LogSeq to make you use it more
-logseq
+logseq &
