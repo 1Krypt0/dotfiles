@@ -45,6 +45,7 @@ alias cpd='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/CPD/'
 alias esof='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/ES/'
 alias ia='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/IA/'
 alias comp='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/COMP/'
+alias pi='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/PI/'
 
 # Alias for quickly accessing my blog folder
 alias blog='cd ~/Desktop/2.Areas/Blog'
@@ -62,6 +63,8 @@ alias sicstus='rlwrap /usr/local/sicstus4.7.0/bin/sicstus'
 export GOPATH="$(go env GOPATH)"
 export PATH="${PATH}:${GOPATH}/bin"
 
+export EDITOR="vim"
+
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 export JAVA_HOME='/usr/lib/jvm/java-11-openjdk' # Change to version 8 if working on Flutter, but to 11 if if on COMP  
@@ -71,6 +74,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
 
 pfetch
 
