@@ -60,22 +60,15 @@ alias gstat='git status'
 
 alias sicstus='rlwrap /usr/local/sicstus4.7.0/bin/sicstus'
 
-export GOPATH="$(go env GOPATH)"
-export PATH="${PATH}:${GOPATH}/bin"
-
 export EDITOR="vim"
 
-export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
-export JAVA_HOME='/usr/lib/jvm/java-11-openjdk' # Change to version 8 if working on Flutter, but to 11 if if on COMP  
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk' 
 export PATH=$JAVA_HOME/bin:$PATH 
-export ANDROID_SDK_ROOT='/opt/android-sdk'
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
-export PATH=$PATH:$ANDROID_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
 
 pfetch
 
