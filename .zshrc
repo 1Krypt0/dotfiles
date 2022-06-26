@@ -21,7 +21,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ## Editor aliases
 alias doom='~/.emacs.d/bin/doom'
-alias vim='nvim'
+alias vim='lvim'
 
 ## Changing "ls" to "exa"
 alias ls='exa --color=always --group-directories-first' # my preferred listing
