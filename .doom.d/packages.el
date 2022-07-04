@@ -10,12 +10,7 @@
 ;(package! some-package)
 ;
 (package! tidy)
-(package! org-bullets)
 (package! visual-fill-column)
-(package! org-roam)
-(package! treemacs-all-the-icons)
-(package! treemacs-icons-dired)
-(package! editorconfig)
 (package! prettier-js
   :recipe (:host github :repo "prettier/prettier-emacs"))
 (package! lsp-tailwindcss
@@ -23,6 +18,7 @@
 (package! catppucin-theme
   :recipe (:host github :repo "pspiagicw/catppuccin-emacs"
            :files ("catppuccin-theme.el")))
+(package! org-modern)
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/raxod502/straight.el#the-recipe-format

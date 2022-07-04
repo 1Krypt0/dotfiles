@@ -22,24 +22,21 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 (setq doom-font (font-spec :family "Iosevka Slab" :size 16)
       doom-variable-pitch-font (font-spec :family "Iosevka Slab")
-      doom-unicode-font (font-spec :family "Iosevka Slab")
+      doom-unicode-font (font-spec :family "Iosevka Slab"))
       ;; doom-big-font (font-spec :family "Fira Mono" :size 19)
-      )
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+
 (setq doom-theme 'doom-tomorrow-night)
-(with-eval-after-load 'doom-themes
-  (doom-themes-treemacs-config))
-(setq doom-themes-treemacs-theme "doom-colors")
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Desktop/1.Projects/RoamNotes")
+(setq org-directory "~/Desktop/4.Archives/RoamNotes")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -63,7 +60,6 @@
 
 
 ;; ORG Mode configuration part of the config file
-
 (defun efs/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
@@ -74,10 +70,6 @@
 
 (defun efs/org-font-setup ()
   ;; Replace list hyphen with dot
-  (font-lock-add-keywords 'org-mode
-                          '(("^ *\\([-]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-
   ;; Set faces for heading levels
   (dolist (face '((org-level-1 . 1.55)
                   (org-level-2 . 1.4)
@@ -105,21 +97,13 @@
         org-hide-emphasis-markers t)
   (efs/org-font-setup))
 
-(dolist (mode '(org-mode-hook))
-  (add-hook mode (lambda () (display-line-numbers-mode 0))))
-
-(use-package org-bullets
-  :after org
-  :hook (org-mode . org-bullets-mode)
-  :custom
-  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 (use-package org-roam
   :ensure t
   :init
   (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory "~/Desktop/1.Projects/RoamNotes")
+  (org-roam-directory "~/Desktop/4.Archives/RoamNotes")
   (org-roam-complete-everywhere t)
   (org-roam-capture-templates
    '(("d" "default" plain
@@ -163,14 +147,6 @@
         :desc "Go to tomorrow's note" "T" #'org-roam-dailies-goto-tomorrow
         :desc "Go to note in 'date'" "d" #'org-roam-dailies-goto-date))))
 
-(defun efs/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100
-        visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
-
-(use-package visual-fill-column
-  :hook (org-mode . efs/org-mode-visual-fill))
-
 (setq undo-limit 80000000)
 (global-subword-mode t)
 
@@ -187,3 +163,6 @@
     "/usr/lib/node_modules"
     "--stdio"))
 
+
+(add-hook 'org-mode-hook #'org-modern-mode)
+(add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
