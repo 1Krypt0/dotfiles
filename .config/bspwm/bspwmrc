@@ -32,9 +32,7 @@ bspc rule -a Alacritty desktop=term follow=on
 bspc rule -a Emacs desktop=dev follow=on state=tiled
 bspc rule -a firefox desktop=web follow=on
 bspc rule -a Zathura desktop=reader follow=on state=tiled
-bspc rule -a code desktop=code state=floating follow=on
 bspc rule -a discord desktop=discord follow=on
-bspc rule -a texmaker desktop=office follow=on
 bspc rule -a spotify desktop=spotify follow=on
 
 # Kill programs before starting
