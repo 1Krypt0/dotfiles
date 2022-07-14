@@ -24,8 +24,8 @@ super + shift + {s,n}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {f,t,s,d,e,c,l,z,o}
-	{firefox,pcmanfm,spotify,discord,emacs,code,logseq,zathura,obsidian}
+super + {f,n,s,d,e,l,z}
+	{firefox,nautilus,spotify,discord,emacs,logseq,zathura}
 
 ##---------- System ----------##
 
@@ -82,7 +82,7 @@ ctrl + alt + Escape
     xkill
 
 # Fullscreen or Monocle
-super + shift + f
+super + m
 	bspc desktop -l next
 	
 # Split horizontal, vertical or cancel
@@ -98,7 +98,7 @@ super + space
     bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
-super + {p,t}
+super + shift + {p,t}
     bspc node -t {pseudo_tiled,tiled}
 
 # Set the node flags
@@ -106,7 +106,7 @@ super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 # Send the window to another edge of the screen
-super + {_,shift + }{Left,Down,Up,Right}
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Change focus to next window, including floating window
@@ -126,15 +126,15 @@ super + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
 
 # Expanding windows
-super + control + {Left,Right,Up,Down}
+super + control + {h,j,k,l}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
 	
 ## Shrinking windows
-super + alt + {Left,Right,Up,Down}
+super + alt + {h,j,k,l}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 	
 ## Move floating windows
-alt + shift + {Left,Down,Up,Right}
+alt + shift + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Hide/Unhide Window
