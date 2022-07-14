@@ -3,16 +3,16 @@
 MONITORS=$(xrandr -q | grep -w "connected" | wc -l)
 
 if [[ $MONITORS -eq "2" ]]; then
-  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-1 --mode 1920x1080 --rotate normal --left-of eDP-1 
+  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP-1 
 
   bspc monitor eDP-1 -d web brain discord reader spotify
-  bspc monitor HDMI-1-1 -d term dev code
+  bspc monitor HDMI-1-0 -d term dev code
 
 elif [[ $MONITORS -eq "3" ]]; then
-  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-1 --mode 1920x1080 --rotate normal --left-of eDP-1 --output DP-1-1 --mode 1920x1080 --rotate normal --right-of HDMI-1-1
+  xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP-1 --output DP-1-1 --mode 1920x1080 --rotate normal --right-of HDMI-1-0
 
   bspc monitor eDP-1 -d discord spotify
-  bspc monitor HDMI-1-1 -d term dev code
+  bspc monitor HDMI-1-0 -d term dev code
   bspc monitor DP-1-1 -d web brain reader
 
 elif [[ $MONITORS -eq "1" ]]; then
