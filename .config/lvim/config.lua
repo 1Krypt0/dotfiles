@@ -144,7 +144,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- Additional Plugins
-lvim.plugins = {
+ lvim.plugins = {
   "catppuccin/nvim",
 }
 
