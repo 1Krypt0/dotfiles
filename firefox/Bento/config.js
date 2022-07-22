@@ -102,6 +102,10 @@ const CONFIG = {
         name: 'All the Books',
         link: 'https://z-lib.org/',
       },
+      {
+        name: 'Omnivore',
+        link: 'https://www.omnivore.app/',
+      },
     ],
     secondList: [
       {
@@ -117,10 +121,6 @@ const CONFIG = {
         link: 'https://moodle.up.pt/',
       },
       {
-        name: 'LTW Playlist',
-        link: 'https://www.youtube.com/playlist?list=PLZmJhNlbpQ7_SM7JwKPiZiFBatWcMeXoa',
-      },
-      {
         name: 'Study Music',
         link: 'https://www.youtube.com/c/StudyMD/videos',
       },
@@ -131,12 +131,12 @@ const CONFIG = {
         link: 'https://www.apetogentleman.com/',
       },
       {
-        name: 'Man of Many',
-        link: 'https://manofmany.com',
+        name: 'bodyweightfitness',
+        link: 'https://www.reddit.com/r/bodyweightfitness/',
       },
       {
-        name: 'Menswear Style',
-        link: 'https://www.menswearstyle.co.uk/',
+        name: 'Fitness Wiki',
+        link: 'https://thefitness.wiki/',
       },
       {
         name: 'Budget Bytes',
