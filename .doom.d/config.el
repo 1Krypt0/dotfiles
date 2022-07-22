@@ -166,3 +166,5 @@
 
 (add-hook 'org-mode-hook #'org-modern-mode)
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
+
+(setq scroll-margin 8)

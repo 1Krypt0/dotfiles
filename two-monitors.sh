@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-xrandr --output --off
+xrandr --output eDP-1 --off
 
 xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rotate normal --output DP-1-1 --mode 1920x1080 --rotate normal --right-of HDMI-1-0
 
