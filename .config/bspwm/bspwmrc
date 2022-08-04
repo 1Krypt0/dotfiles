@@ -1,22 +1,22 @@
 #! /bin/sh
 
-MONITORS=$(xrandr -q | grep -w "connected" | wc -l)
+MONITORS=$(xrandr -q | grep -cw "connected")
 
-if [[ $MONITORS -eq "2" ]]; then
+if [ "$MONITORS" -eq "2" ]; then
   xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP-1 
 
   bspc monitor eDP-1 -d web brain discord reader spotify
   bspc monitor HDMI-1-0 -d term dev code
 
-elif [[ $MONITORS -eq "3" ]]; then
+elif [ "$MONITORS" -eq "3" ]; then
   xrandr --output eDP-1 --primary --mode 1920x1080 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP-1 --output DP-1-1 --mode 1920x1080 --rotate normal --right-of HDMI-1-0
 
   bspc monitor eDP-1 -d discord spotify
   bspc monitor HDMI-1-0 -d term dev code
   bspc monitor DP-1-1 -d web brain reader
 
-elif [[ $MONITORS -eq "1" ]]; then
-  bspc monitor eDP-1 -d term dev web brain code discord reader spotify
+elif [ "$MONITORS" -eq "1" ]; then
+  bspc monitor eDP-1 -d term dev code web brain discord reader spotify
 fi
 
 
@@ -30,10 +30,12 @@ bspc config gapless_monocle      true
 
 bspc rule -a Alacritty desktop=term follow=on
 bspc rule -a Emacs desktop=dev follow=on state=tiled
+bspc rule -a Code desktop=code follow=on
 bspc rule -a firefox desktop=web follow=on
+bspc rule -a Logseq desktop=brain follow=on
 bspc rule -a Zathura desktop=reader follow=on state=tiled
 bspc rule -a discord desktop=discord follow=on
-bspc rule -a spotify desktop=spotify follow=on
+bspc rule -a Spotify desktop=spotify follow=on
 
 # Kill programs before starting
 killall polybar sxhkd dunst redshift feh
@@ -65,8 +67,6 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 #Launch redshift in an attempt to reduce eyestrain
 redshift -l '41.53183:-8.61233' &
 
-#Launch Spotify even if I won't use it
-spotify &
-
-# Launch LogSeq to make you use it more
-logseq &
+if [ "$MONITORS" -eq "3" ]; then
+  two-monitors &
+fi

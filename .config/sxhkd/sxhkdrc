@@ -24,8 +24,8 @@ super + shift + {s,n}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {f,n,s,d,e,l,z}
-	{firefox,nautilus,spotify,discord,emacs,logseq,zathura}
+super + {f,n,s,d,e,l,z,c}
+	{firefox,nautilus,spotify,discord,emacs,logseq,zathura, code}
 
 ##---------- System ----------##
 
