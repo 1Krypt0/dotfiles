@@ -62,6 +62,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## Editor aliases
 alias doom='~/.emacs.d/bin/doom'
 alias vim='lvim'
+alias ..='cd ..'
+alias mux='tmuxinator'
 
 ## Changing "ls" to "exa"
 alias ls='exa --color=always --group-directories-first' # my preferred listing
@@ -87,6 +89,13 @@ alias esof='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/ES/'
 alias ia='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/IA/'
 alias comp='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/COMP/'
 alias pi='cd ~/Desktop/2.Areas/Uni/Third-Year/Second-Semester/PI/'
+
+### Fourth-Year, First Semester
+alias ac='cd ~/Desktop/1.Projects/ac-proj/'
+alias ds='cd ~/Desktop/1.Projects/ds-proj/'
+alias pri='cd ~/Desktop/1.Projects/pri-proj/'
+alias sdle='cd ~/Desktop/1.Projects/sdle-proj/'
+alias sgi='cd ~/Desktop/1.Projects/sgi-proj/'
 
 # Alias for quickly accessing my blog folder
 alias blog='cd ~/Desktop/2.Areas/Blog'
@@ -114,3 +123,5 @@ export PATH="$HOME/.local/bin:$PATH"
 pfetch
 
 eval "$(starship init zsh)"
+
+

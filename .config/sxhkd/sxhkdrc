@@ -24,8 +24,8 @@ super + shift + {s,n}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {f,n,s,d,e,l,z,c}
-	{firefox,nautilus,spotify,discord,emacs,logseq,zathura, code}
+super + {f,n,s,d,e,l,z,c,o}
+	{firefox,nautilus,spotify,discord,emacs,logseq,zathura, code, obsidian}
 
 ##---------- System ----------##
 
@@ -86,7 +86,7 @@ super + m
 	bspc desktop -l next
 	
 # Split horizontal, vertical or cancel
-super + {h,v,c}
+super + shift + {h,v,c}
 	bspc node -p {east,south,cancel}
 
 # Preselect the ratio
