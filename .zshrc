@@ -120,6 +120,8 @@ export PATH="$HOME/.flutter-sdk/flutter/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 pfetch
 
 eval "$(starship init zsh)"
