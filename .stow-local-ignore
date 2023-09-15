@@ -1,7 +1,7 @@
 \.git
 firefox
-LogSeq
-README.md
 assets
 lightdm
-two-monitors.sh
+scripts
+README.md
+xmodmap

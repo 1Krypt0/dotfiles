@@ -1,0 +1,21 @@
+{
+  "headerHeading": null,
+  "tabsOnTop": true,
+  "headerVariant": "Compact",
+  "hideHomeButton": true,
+  "leftSidebarHeading": null,
+  "vaultButtonToBottom": true,
+  "compactSidebarMenu": false,
+  "menuCalendar": false,
+  "headerFlashcardsButton": false,
+  "hideSidebarPageIcons": false,
+  "hideAddNewPage": true,
+  "rightSidebarHeading": null,
+  "hideRightSidebarToolbar": false,
+  "hideBottomHelpButton": true,
+  "contentHeading": null,
+  "alwaysShowNewBlockBullet": false,
+  "otherHeading": null,
+  "pluginUpdateNotify": true,
+  "disabled": false
+}

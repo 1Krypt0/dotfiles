@@ -1,0 +1,8 @@
+{:logseq-bullet-threading {:version "v1.1.4", :repo "pengx17/logseq-plugin-bullet-threading", :effect false, :theme false}
+ :logseq-awesome-links {:version "v1.15.16", :repo "yoyurec/logseq-awesome-links", :effect true, :theme false}
+ :logseq-awesome-styler {:version "v3.7.1", :repo "yoyurec/logseq-awesome-styler", :effect true, :theme false}
+ :logseq-banners-plugin {:version "v3.4.11", :repo "yoyurec/logseq-banners-plugin", :effect true, :theme false}
+ :logseq-awesome-ui {:version "v2.2.6", :repo "yoyurec/logseq-awesome-ui", :effect true, :theme false}
+ :logseq-emoji-picker-fork {:version "v0.0.4", :repo "walsvid/logseq-emoji-picker-fork", :effect false, :theme false}
+ :logseq-awesome-props {:version "v1.10.0", :repo "yoyurec/logseq-awesome-props", :effect true, :theme false}
+ :logseq-catppuccin {:version "v0.2.3", :repo "catppuccin/logseq", :effect false, :theme true}}
