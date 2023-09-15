@@ -12,4 +12,4 @@ killall polybar &
 
 "$HOME"/.config/polybar/two-monitors.sh &
 
-setxkbmap us dvp &
+xmodmap ~/.dotfiles/xmodmap
