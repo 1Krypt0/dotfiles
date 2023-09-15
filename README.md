@@ -11,8 +11,8 @@ Here are some of the main points of the setup:
 - Bar: [Polybar](https://github.com/polybar/polybar)
 - Shell: [zsh](https://wiki.archlinux.org/title/Zsh) with the [Starship prompt](https://starship.rs/)
 - Terminal: [Alacritty](https://alacritty.org/)
-- Editor: [Doom Emacs](https://github.com/hlissner/doom-emacs) for must stuff but also [NvChad](https://github.com/NvChad/NvChad)
-- PKM: [LogSeq](https://github.com/logseq/logseq), an amazing tool I have found recently
+- Editor: [LunarVim](https://www.lunarvim.org/) with a somewhat custom config
+- PKM: [LogSeq](https://github.com/logseq/logseq), but also a bit of [Obsidian](https://obsidian.md/)
 - Launcher: [rofi](https://github.com/davatorium/rofi/)
 - Browser: Firefox with custom [Bento](https://github.com/migueravila/Bento) theme
 - Theme: [Catppuccin](https://github.com/catppuccin/)
@@ -26,9 +26,5 @@ This will probably expand over time as I find more stuff to add here, but for no
 ![Firefox setup](./assets/firefox.png)
 
 ![Floating terminals](./assets/term.png)
-
-![Doom Emacs in all its glory](./assets/doom.png)
-
-![Neovim setup](./assets/nvim.png)
 
 ## Setting up (TODO)
