@@ -33,6 +33,7 @@ bspc rule -a Code desktop=code follow=on
 bspc rule -a firefox desktop=web follow=on
 bspc rule -a Logseq desktop=brain follow=on
 bspc rule -a obsidian desktop=brain follow=on
+bspc rule -a zotero desktop=brain follow=on
 bspc rule -a notion-app desktop=brain follow=on
 bspc rule -a Zathura desktop=reader follow=on state=tiled
 bspc rule -a discord desktop=discord follow=on
