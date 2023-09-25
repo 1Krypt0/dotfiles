@@ -146,31 +146,5 @@ const CONFIG = {
         link: "https://www.budgetbytes.com/",
       },
     ],
-    fourthList: [
-      {
-        name: "FSI - Monday",
-        link: "https://videoconf-colibri.zoom.us/j/82659385429",
-      },
-      {
-        name: "FSI - Thursday",
-        link: "https://videoconf-colibri.zoom.us/j/81203543687",
-      },
-      {
-        name: "LBAW",
-        link: "https://videoconf-colibri.zoom.us/j/81240547359",
-      },
-      {
-        name: "LTW",
-        link: "https://fc-up-pt.zoom.us/j/81509620746",
-      },
-      {
-        name: "PFL",
-        link: "https://videoconf-colibri.zoom.us/j/87911714265?pwd=NFRpUkJHZzBpVENLWTFUZGxwVGNXUT09",
-      },
-      {
-        name: "RC",
-        link: "https://videoconf-colibri.zoom.us/j/98394920212?pwd=MTBNREo3d2J0Yk9YcXBSMTl3SWttUT09",
-      },
-    ],
   },
 };
