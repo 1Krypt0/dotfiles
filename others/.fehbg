@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/krypt0/Pictures/background.png' 
+feh --no-fehbg --bg-fill '/home/krypt0/.config/bspwm/background.png' 
