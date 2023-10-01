@@ -1,12 +1,8 @@
-##---------- Keybindings for bspwm ----------##
+##---------- Keybindings for terminal ----------##
 
-# Terminal (termite)
+# Terminal (alacritty)
 super + Return
 	alacritty
-
-# Floating terminal
-super + shift + Return
-	alacritty -f
 
 ##---------- Rofi Launcher & Menus ----------##
 
@@ -24,8 +20,8 @@ super + shift + {s,n}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {f,n,s,d,e,l,z,c,o}
-	{firefox,nautilus,spotify,discord,emacs,logseq,zathura,code,obsidian}
+super + {f,s,d,l,z,c,o}
+	{firefox,spotify-launcher,discord,logseq,zathura,code,obsidian}
 
 ##---------- System ----------##
 
@@ -52,22 +48,11 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
 
-XF86AudioMute
-	amixer set Master toggle
-	
-# Music control
-XF86Audio{Next,Prev,Play,Stop}
-	mpc {next,prev,toggle,stop}
-
 ##---------- Bspwm ----------##
 
 # Lockscreen
 ctrl + alt + l
     betterlockscreen -l
-
-# Reload Keybindings
-super + Escape
-	pkill -USR1 -x sxhkd
 
 # Quit/Restart bspwm
 ctrl + alt + {q,r}
@@ -77,33 +62,9 @@ ctrl + alt + {q,r}
 super + q
 	bspc node -c
 
-# kill
-ctrl + alt + Escape
-    xkill
-
-# Fullscreen or Monocle
-super + m
-	bspc desktop -l next
-	
-# Split horizontal, vertical or cancel
-super + shift + {h,v,c}
-	bspc node -p {east,south,cancel}
-
-# Preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
 # Toggle beetwen floating & tiled
 super + space
     bspc node -t "~"{floating,tiled}
-
-# Pseudo Tiled & tiled mode
-super + shift + {p,t}
-    bspc node -t {pseudo_tiled,tiled}
-
-# Set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
 
 # Send the window to another edge of the screen
 super + {_,shift + }{h,j,k,l}
@@ -136,9 +97,3 @@ super + alt + {h,j,k,l}
 ## Move floating windows
 alt + shift + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# Hide/Unhide Window
-super + shift + i
-	winmask		
-
-##---------- EOF ----------##
