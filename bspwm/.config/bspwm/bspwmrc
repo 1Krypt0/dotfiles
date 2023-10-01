@@ -55,7 +55,7 @@ picom &
 "$HOME"/.config/dunst/launch.sh
 
 # Set wallpaper for now
-feh --bg-fill ~/Pictures/background.png &
+feh --bg-fill ~/.config/bspwm/background.png &
 
 #Change keyboard layout since Alacritty is acting up
 # setxkbmap us dvp &
