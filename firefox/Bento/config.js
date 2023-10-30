@@ -61,8 +61,8 @@ const CONFIG = {
     {
       id: "5",
       name: "Reddit",
-      icon: "bookmark",
-      link: "https://reddit.com",
+      icon: "dollar-sign",
+      link: "https://krypt0-budget.fly.dev",
     },
     {
       id: "6",
