@@ -126,9 +126,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export FLYCTL_INSTALL="/home/krypt0/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-# This is just for the IoT project to work
-source ~/ncs/zephyr/zephyr-env.sh
-
 pfetch
 
 eval "$(starship init zsh)"

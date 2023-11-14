@@ -28,7 +28,6 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 
 bspc rule -a Alacritty desktop=term follow=on
-bspc rule -a Emacs desktop=dev follow=on state=tiled
 bspc rule -a Code desktop=code follow=on
 bspc rule -a firefox desktop=web follow=on
 bspc rule -a Logseq desktop=brain follow=on
