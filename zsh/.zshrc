@@ -132,3 +132,13 @@ eval "$(starship init zsh)"
 
 
 source /usr/share/nvm/init-nvm.sh
+
+# bun completions
+[ -s "/home/krypt0/.bun/_bun" ] && source "/home/krypt0/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/home/krypt0/.turso:$PATH"
