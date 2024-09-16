@@ -60,7 +60,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # My custom aliases
 
 ## Editor aliases
-alias vim='lvim'
+alias vim='nvim'
 alias ..='cd ..'
 alias mux='tmuxinator'
 
