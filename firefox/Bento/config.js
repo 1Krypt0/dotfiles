@@ -21,13 +21,6 @@ const CONFIG = {
   greetingEvening: "Good evening,",
   greetingNight: "Go to Sleep,",
 
-  // Weather
-  weatherKey: "516ad24f2ba564b4bcdb9c66129d254f",
-  weatherIcons: "OneDark", // 'Nord', 'Dark', 'White'
-  weatherUnit: "C",
-  weatherLatitude: "41.532051",
-  weatherLongitude: "-8.619053",
-
   // ┌─┐┌─┐┬─┐┌┬┐┌─┐
   // │  ├─┤├┬┘ ││└─┐
   // └─┘┴ ┴┴└──┴┘└─┘
@@ -48,21 +41,21 @@ const CONFIG = {
     },
     {
       id: "3",
-      name: "Routine",
-      icon: "trello",
-      link: "https://app.routine.co/",
+      name: "Budget",
+      icon: "dollar-sign",
+      link: "https://krypt0-budget.fly.dev",
     },
     {
       id: "4",
-      name: "Calendar",
-      icon: "calendar",
-      link: "https://calendar.google.com/calendar/r",
+      name: "LinkedIn",
+      icon: "linkedin",
+      link: "https://www.linkedin.com/in/tiago-rodrigues-221ba7204/",
     },
     {
       id: "5",
-      name: "Reddit",
-      icon: "dollar-sign",
-      link: "https://krypt0-budget.fly.dev",
+      name: "Calendar",
+      icon: "calendar",
+      link: "https://calendar.google.com/calendar/r",
     },
     {
       id: "6",
@@ -80,70 +73,53 @@ const CONFIG = {
   firstListIcon: "book-open",
   secondListIcon: "briefcase",
   thirdListIcon: "zap",
-  fourthListIcon: "link",
 
   // Links
   lists: {
+    // Reading
     firstList: [
-      {
-        name: "College Info Geek",
-        link: "https://collegeinfogeek.com",
-      },
-      {
-        name: "Art of Manliness",
-        link: "https://www.artofmanliness.com/",
-      },
-      {
-        name: "Netflix",
-        link: "https://www3.watchserieshd.ru/",
-      },
       {
         name: "Omnivore",
         link: "https://www.omnivore.app/",
       },
       {
-        name: "Study Music",
-        link: "https://www.youtube.com/c/StudyMD/videos",
+        name: "Ape to Gentleman",
+        link: "https://www.apetogentleman.com/",
+      },
+      {
+        name: "College Info Geek",
+        link: "https://collegeinfogeek.com",
+      },
+      {
+        name: "Reddit",
+        link: "https://reddit.com",
+      },
+      {
+        name: "Budget Bytes",
+        link: "https://www.budgetbytes.com/",
       },
     ],
+    // Work stuff
     secondList: [
+      {
+        name: "NeetCode",
+        link: "https://neetcode.io/roadmap",
+      },
+      {
+        name: "Figma",
+        link: "https://www.figma.com",
+      },
+      {
+        name: "SvelteKit",
+        link: "https://kit.svelte.dev/docs/introduction",
+      },
       {
         name: "Webmail",
         link: "https://webmail.edu.up.pt/",
       },
       {
-        name: "FEUP",
-        link: "https://sigarra.up.pt/feup/pt/fest_geral.cursos_list?pv_num_unico=201907021",
-      },
-      {
-        name: "Moodle",
-        link: "https://moodle.up.pt/",
-      },
-      {
-        name: "Canvas",
-        link: "https://canvas.utwente.nl/",
-      },
-      {
-        name: "Rooster",
-        link: "https://rooster.utwente.nl/schedule",
-      },
-    ],
-    thirdList: [
-      {
-        name: "Ape to Gentleman",
-        link: "https://www.apetogentleman.com/",
-      },
-      {
-        name: "bodyweightfitness",
-        link: "https://www.reddit.com/r/bodyweightfitness/",
-      },
-      {
-        name: "Fitness Wiki",
-        link: "https://thefitness.wiki/",
-      },
-      {
-        name: "Budget Bytes",
-        link: "https://www.budgetbytes.com/",
+        name: "Focus Music",
+        link: "https://www.youtube.com/c/StudyMD/videos",
       },
     ],
   },
