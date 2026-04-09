@@ -10,5 +10,7 @@ return {
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
+
+		vim.treesitter.language.register("markdown", "mdx")
 	end,
 }

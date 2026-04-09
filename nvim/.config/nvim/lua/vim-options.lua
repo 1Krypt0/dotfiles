@@ -14,7 +14,7 @@ vim.opt.wrap = true
 
 -- Set space as leader key
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 
 -- Some system config: let it use the mouse, clipboard, and undo history
 vim.g.have_nerd_font = true
@@ -55,4 +55,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank()
 	end,
+})
+
+vim.filetype.add({
+	extension = {
+		mdx = "markdown.mdx",
+	},
 })

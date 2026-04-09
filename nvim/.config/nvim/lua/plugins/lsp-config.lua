@@ -16,8 +16,8 @@ return {
 					"isort",
 					"black",
 					"eslint_d",
-					auto_update = true,
 				},
+				auto_update = true,
 			})
 		end,
 	},
@@ -26,15 +26,14 @@ return {
 		opts = {
 			auto_install = true,
 			ensure_installed = {
-				"tsserver",
+				"ts_ls",
 				"html",
 				"cssls",
 				"tailwindcss",
 				"svelte",
 				"lua_ls",
 				"emmet_ls",
-				"prismals",
-				"pyright",
+				"ruff",
 			},
 		},
 	},
@@ -51,13 +50,49 @@ return {
 			require("mason").setup()
 			require("mason-lspconfig").setup()
 
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({
-						capabilities = capabilities,
-					})
-				end,
-			})
+			-- ACTIVATE THIS WHENEVER WORKING WITH WINDOWS CODE
+			-- vim.lsp.config("rust_analyzer", {
+			-- 	settings = {
+			-- 		["rust-analyzer"] = {
+			-- 			cargo = {
+			-- 				target = "x86_64-pc-windows-msvc",
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
+
+			-- require("mason-lspconfig").setup_handlers({
+			-- 	function(server_name)
+			-- 		if server_name == "pylsp" then
+			-- 			require("lspconfig").pylsp.setup({
+			-- 				settings = {
+			-- 					pylsp = {
+			-- 						plugins = {
+			-- 							pycodestyle = {
+			-- 								ignore = { "W391" },
+			-- 								maxLineLength = 250,
+			-- 							},
+			-- 						},
+			-- 					},
+			-- 				},
+			-- 			})
+			-- 		elseif server_name == "ruff" then
+			-- 			require("lspconfig").ruff.setup({
+			-- 				init_options = {
+			-- 					settings = {
+			-- 						lint = {
+			-- 							extendIgnore = { "CPY001" },
+			-- 						},
+			-- 					},
+			-- 				},
+			-- 			})
+			-- 		else
+			-- 			require("lspconfig")[server_name].setup({
+			-- 				capabilities = capabilities,
+			-- 			})
+			-- 		end
+			-- 	end,
+			-- })
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -76,8 +111,11 @@ return {
 					opts.desc = "Go to definition"
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
+					opts.desc = "Go to implementation"
+					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+
 					opts.desc = "Open code actions"
-					vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
 					opts.desc = "Smart rename"
 					vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts)
